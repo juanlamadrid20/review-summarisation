@@ -1,15 +1,16 @@
+# Databricks notebook source
 """Global Variables"""
 
 # Configurable
 ################################################################
 # Data Globals (All Notebooks)
 
-CATALOG_NAME = "solacc_uc"  # Unity Catalog Name
-SCHEMA_NAME = "review_summarisation"  # Schema Name
+CATALOG_NAME = "juan_dev"  # Unity Catalog Name
+SCHEMA_NAME = "solution_accelerators"  # Schema Name
 
 # UC Options (All Notebooks)
 USE_UC = True  # Use Unity Catalog?
-USE_VOLUMES = False  # Use Volumes?
+USE_VOLUMES = True  # Use Volumes?
 
 # Sampling Parameters (0.2-explore-prep)
 TOP_BOOK_COUNT = 1000  # How many popular books to take ?
@@ -29,3 +30,4 @@ else:
 
 # Disable Volumes if not using Unity Catalog
 USE_VOLUMES = False if not USE_UC else USE_VOLUMES
+
