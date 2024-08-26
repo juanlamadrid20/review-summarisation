@@ -6,7 +6,7 @@
 # Data Globals (All Notebooks)
 
 CATALOG_NAME = "juan_dev"  # Unity Catalog Name
-SCHEMA_NAME = "solution_accelerators"  # Schema Name
+SCHEMA_NAME = "sol_acc_review_summarisation"  # Schema Name
 
 # UC Options (All Notebooks)
 USE_UC = True  # Use Unity Catalog?
@@ -31,3 +31,12 @@ else:
 # Disable Volumes if not using Unity Catalog
 USE_VOLUMES = False if not USE_UC else USE_VOLUMES
 
+
+spark.sql(f"use catalog {CATALOG_NAME}");
+spark.sql(f"use schema {SCHEMA_NAME}");
+
+
+# COMMAND ----------
+
+# MAGIC %sql
+# MAGIC select current_catalog(), current_schema()
